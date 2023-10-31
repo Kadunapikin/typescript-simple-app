@@ -1,12 +1,12 @@
 import React, {FC} from 'react'
 import './App.css';
-import { Person } from './component/Person';
+import { Person, hairColor } from './component/Person';
 
 
 const App: FC = () => {
   return (
     <div>
-      <Person name='Isaac' age={32} email='ibakoshi27@gmail.com' />
+      <Person name='Isaac' age={32} email='ibakoshi27@gmail.com' hairColor={hairColor.pink} />
     </div>
   )
 }
