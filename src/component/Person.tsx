@@ -22,6 +22,9 @@ export const Person: FC<Props> = ({ name, age, email, hairColor }) => {
         setCountry(event.target.value);
     }
 
+    type NameType = "Isaac" | "Daniel" | "David"
+    const nameForType: NameType = "David"
+
 
     return (
       <div>
@@ -31,6 +34,7 @@ export const Person: FC<Props> = ({ name, age, email, hairColor }) => {
         <h1>He is great developer from {country}</h1>
         <input placeholder='What country are byou from?' onChange={handleChange}></input>
         <h2>{hairColor}</h2>
+        <h1>{nameForType}</h1>
       </div>
     );
   }
