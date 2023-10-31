@@ -1,13 +1,29 @@
-import React, {FC} from 'react'
+import React, { FC, createContext } from 'react'
 import './App.css';
 import { Person, hairColor } from './component/Person';
 
+interface AppContextInterface {
+  name: string;
+  age: number;
+  country: string;
+}
+
+const AppContext = createContext<AppContextInterface | null>(null);
 
 const App: FC = () => {
+
+  const contextValue: AppContextInterface = {
+    name: 'Abel',
+    age: 36,
+    country: 'Malagum'
+  }
+
   return (
+    <AppContext.Provider value={contextValue}>
     <div>
       <Person name='Isaac' age={32} email='ibakoshi27@gmail.com' hairColor={hairColor.pink} />
     </div>
+    </AppContext.Provider>
   )
 }
 
